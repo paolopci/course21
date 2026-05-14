@@ -5,3 +5,14 @@
 } @empty {
   <h2>Non ci sono utenti registrati.</h2>
 }
+
+<br />
+
+@for (item of users(); track item.id) {
+  <div [ngSwitch]="users()">
+    <p *ngSwitchCase="10">la tua eta e di anni {{ item.age }}</p>
+    <p *ngSwitchCase="20">la tua eta e di anni {{ item.age }}</p>
+    <p *ngSwitchCase="30">la tua eta e di anni {{ item.age }}</p>
+    <p *ngSwitchDefault>la tua eta e di anni ... {{ item.age }}</p>
+  </div>
+}
