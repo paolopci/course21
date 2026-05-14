@@ -2,4 +2,6 @@
 
 @for (item of users(); track $index) {
   <p>{{ $index + 1 }} - {{ item.nome }}</p>
+} @empty {
+  <h2>Non ci sono utenti registrati.</h2>
 }
