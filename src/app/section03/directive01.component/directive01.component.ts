@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-directive01',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './directive01.component.html',
   styleUrl: './directive01.component.css',
 })
 export class Directive01Component {
+  trackByFn: any;
+
   utenti = [
     {
       id: 1,
