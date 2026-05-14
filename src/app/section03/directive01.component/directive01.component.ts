@@ -15,23 +15,22 @@ export class Directive01Component {
     {
       id: 1,
       nome: 'Paolo',
-      cognome: 'Paci',
-      email: 'paolo.paci@gmail.com',
-      ruolo: 'Admin',
     },
     {
-      id: 1,
+      id: 2,
       nome: 'Celeste',
-      cognome: 'Celeste',
-      email: 'celeste.paci@gmail.com',
-      ruolo: 'Admin',
     },
     {
-      id: 1,
+      id: 3,
       nome: 'Vittorio',
-      cognome: 'Vittorio',
-      email: 'vittorio.paci@gmail.com',
-      ruolo: 'Admin',
     },
   ];
+
+  trackByItemId(item: any) {
+    return item.id;
+  }
+
+  updateItem() {
+    this.utenti[1] = { id: 2, nome: 'Venerina' };
+  }
 }
