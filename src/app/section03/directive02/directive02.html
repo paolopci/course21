@@ -1,5 +1,5 @@
 <p>directive02 works!</p>
 
-@for (item of users(); track item.id) {
-  <p>{{ item.id }} - {{ item.nome }}</p>
+@for (item of users(); track $index) {
+  <p>{{ $index + 1 }} - {{ item.nome }}</p>
 }
