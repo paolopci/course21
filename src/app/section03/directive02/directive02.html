@@ -16,3 +16,22 @@
     <p *ngSwitchDefault>la tua eta e di anni ... {{ item.age }}</p>
   </div>
 }
+
+<br />
+
+@for (item of users(); track item.id) {
+  @switch (item.age) {
+    @case (10) {
+      <p>la tua eta e di anni {{ item.age }}</p>
+    }
+    @case (20) {
+      <p>la tua eta e di anni {{ item.age }}</p>
+    }
+    @case (30) {
+      <p>la tua eta e di anni {{ item.age }}</p>
+    }
+    @default {
+      <p>la tua eta e di anni ... {{ item.age }}</p>
+    }
+  }
+}
