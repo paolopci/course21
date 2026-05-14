@@ -35,3 +35,29 @@
     }
   }
 }
+
+<br />
+<div>
+  <h2>Role Selection</h2>
+  <select [(ngModel)]="employeeRole">
+    <option value="">Select Role</option>
+    <option value="Developer">Developer</option>
+    <option value="Tester">Tester</option>
+    <option value="Manager">Manager</option>
+    <option value="Designer">Designer</option>
+    <option value="HR">HR</option>
+    <option value="Engineer">Engineer</option>
+    <option value="Father">Father</option>
+    <option value="Mom">Mom</option>
+    <option value="User">User</option>
+    <option value="Deploy">Deploy</option>
+  </select>
+</div>
+
+@for (item of users(); track item.id) {
+  @switch (item.role) {
+    @case (employeeRole) {
+      {{ item.nome }}
+    }
+  }
+}
