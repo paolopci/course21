@@ -1,0 +1,63 @@
+<p>directive02 works!</p>
+
+@for (item of users(); track $index) {
+  <p>{{ $index + 1 }} - {{ item.nome }}</p>
+} @empty {
+  <h2>Non ci sono utenti registrati.</h2>
+}
+
+<br />
+
+@for (item of users(); track item.id) {
+  <div [ngSwitch]="users()">
+    <p *ngSwitchCase="10">la tua eta e di anni {{ item.age }}</p>
+    <p *ngSwitchCase="20">la tua eta e di anni {{ item.age }}</p>
+    <p *ngSwitchCase="30">la tua eta e di anni {{ item.age }}</p>
+    <p *ngSwitchDefault>la tua eta e di anni ... {{ item.age }}</p>
+  </div>
+}
+
+<br />
+
+@for (item of users(); track item.id) {
+  @switch (item.age) {
+    @case (10) {
+      <p>la tua eta e di anni {{ item.age }}</p>
+    }
+    @case (20) {
+      <p>la tua eta e di anni {{ item.age }}</p>
+    }
+    @case (30) {
+      <p>la tua eta e di anni {{ item.age }}</p>
+    }
+    @default {
+      <p>la tua eta e di anni ... {{ item.age }}</p>
+    }
+  }
+}
+
+<br />
+<div>
+  <h2>Role Selection</h2>
+  <select [(ngModel)]="employeeRole">
+    <option value="">Select Role</option>
+    <option value="Developer">Developer</option>
+    <option value="Tester">Tester</option>
+    <option value="Manager">Manager</option>
+    <option value="Designer">Designer</option>
+    <option value="HR">HR</option>
+    <option value="Engineer">Engineer</option>
+    <option value="Father">Father</option>
+    <option value="Mom">Mom</option>
+    <option value="User">User</option>
+    <option value="Deploy">Deploy</option>
+  </select>
+</div>
+
+@for (item of users(); track item.id) {
+  @switch (item.role) {
+    @case (employeeRole) {
+      {{ item.nome }}
+    }
+  }
+}
