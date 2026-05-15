@@ -1,0 +1,13 @@
+input {
+  width: 200px;
+  height: 25px;
+  font-size: 15px;
+}
+
+input.txt {
+  background-color: rgba(143, 123, 13, 0.729);
+}
+
+input.italic {
+  font-style: italic;
+}
