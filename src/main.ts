@@ -5,5 +5,7 @@ import { Directive01Component } from './app/section03/directive01.component/dire
 import { Directive02 } from './app/section03/directive02/directive02';
 import { App13 } from './app/section03/app13/app13';
 import { App17 } from './app/section03/app17/app17';
+import { App01 } from './app/section04/app01/app01';
+import { Father } from './app/section04/father/father';
 //bootstrapApplication(Directive01Component, appConfig).catch((err) => console.error(err));
-bootstrapApplication(App17, appConfig).catch((err) => console.error(err));
+bootstrapApplication(Father, appConfig).catch((err) => console.error(err));
